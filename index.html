@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app="NPSApp">
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+		<script src="npsapp.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	</head>
+	<body>
+	<div ng-controller="NPSController as c">
+	<p>
+		<label>Critics:</label>
+		<input type="text" ng-model="c.critics" placeholder="Enter a number here">
+	</p>
+	<p>
+		<label>Neutrals:</label>
+		<input type="text" ng-model="c.neutrals" placeholder="Enter a number here">
+	</p>
+	<p>
+		<label>Promotors:</label>
+		<input type="text" ng-model="c.promotors" placeholder="Enter a number here">
+	</p>
+	<hr>
+	<h1>NPS Score: {{c.nps()}}</h1>
+	</div>
+  </body>
+</html>
