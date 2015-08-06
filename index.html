@@ -9,15 +9,15 @@
 	<div ng-controller="NPSController as c">
 	<p>
 		<label>Critics (&lt;7):</label>
-		<input type="text" ng-model="c.critics" placeholder="Enter a number here">
+		<input type="number" min="0" ng-model="c.critics">
 	</p>
 	<p>
 		<label>Neutrals (7-8):</label>
-		<input type="text" ng-model="c.neutrals" placeholder="Enter a number here">
+		<input type="number" min="0" ng-model="c.neutrals">
 	</p>
 	<p>
 		<label>Promotors (9-10):</label>
-		<input type="text" ng-model="c.promotors" placeholder="Enter a number here">
+		<input type="number" min="0" ng-model="c.promotors">
 	</p>
 	<hr>
 	<h1>NPS Score: {{c.nps()}}</h1>
